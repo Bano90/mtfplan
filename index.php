@@ -109,7 +109,7 @@
      $app->route('GET /plan/@id/@date',function($app,$params){
          $db=new \DB\Jig('plans/',\DB\Jig::FORMAT_JSON);
          $mapper=new \DB\Jig\Mapper($db,'plans.json');
-         $plans=$mapper->find(Array('@id=? ans @date=?',$params['id'],$params['date']));
+         $plans=$mapper->find(Array('@id=? and @date=?',$params['id'],$params['date']));
           $res=[];
           foreach($plans as $k=>$plan){
               if($plan["id"]==$params["id"]){
