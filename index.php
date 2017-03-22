@@ -36,7 +36,7 @@
      {
          $data=json_decode($app['BODY']);
          echo json_encode($data);
-         $db=new \DB\Jig('plans',\DB\Jig::FORMAT_JSON);
+         $db=new \DB\Jig('plans/',\DB\Jig::FORMAT_JSON);
          $mapper=new \DB\Jig\Mapper($db,'plans.json');
 
          $mapper->id=$data->id; //azonosító
@@ -130,7 +130,7 @@
          $data=json_decode($data);
 
          $resault=[];
-         foreach($data as $k->$v){
+         foreach($data as $v){
              array_push($resault,$v);
          }
          echo json_encode($resault);
