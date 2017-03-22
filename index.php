@@ -42,7 +42,7 @@
          $mapper->id=$data->id; //azonosító
          $mapper->date=$data->date; //dátum
          $mapper->projectname=$data->projectname; //projekt neve
-         $mapper->type=$date->type; //típus
+         $mapper->type=$data->type; //típus
          $mapper->amountshift1=$data->amountshift1; // tervezett darab szám reggeles szak
          $mapper->amountshift2=$data->amountshift2; // tervezett darab szám délutános szak
          $mapper->amountshift3=$data->amountshift3; // tervezett darab szám éjszakás szak
