@@ -102,8 +102,8 @@
          @unlink($db);
          @unlink($plan);
      }
-
-     $app=require('../f3lib/base.php');
+ }
+     $app = require('../f3lib/base.php');
      $app->map('/plan/@id','Plan');
 
      $app->route('GET /plan/@id/@date',function($app,$params){
@@ -125,7 +125,7 @@
           }
      });
 
-     $app->route('GET/allplans',function($app){
+     $app->route('GET /allplans',function($app){
          $data=file_get_contents('plans/plans.json');
          $data=json_decode($data);
 
@@ -136,5 +136,4 @@
          echo json_encode($resault);
      });
      $app->run();
- }
 ?>
